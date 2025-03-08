@@ -8,3 +8,6 @@ targets
 
 selected_target = targets.target_chembl_id[4]
 selected_target
+
+activity = new_client.activity
+res = activity.filter(target_chembl_id=selected_target).filter(standard_type="IC50")
